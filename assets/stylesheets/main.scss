@@ -1,0 +1,75 @@
+$theme-clr: rgba(45, 111, 103, 1);
+$txt-clr: #fff;
+$font: "Arial",
+sans-serif;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+::placeholder {
+    color: $txt-clr;
+    opacity: 1;
+}
+
+@mixin flex($dir, $justify: space-around) {
+    display: flex;
+    justify-content: $justify;
+    flex-direction: $dir;
+    align-items: center;
+}
+
+#posi {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+}
+
+#arrow-btn {
+    color: $theme-clr;
+    background-color: #fff;
+    display: inline-block;
+    padding: 0.35rem 0.4rem 0.35rem 2rem;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+}
+
+body {
+    font-size: 14px;
+    color: $txt-clr;
+    font-family: $font;
+    font-weight: 500;
+    overflow-x: hidden;
+    background-color: rgba(40, 114, 108, 1);
+    width: 100%;
+    height: 100vh;
+    letter-spacing: 0.1em;
+    position: relative;
+    z-index: 1;
+}
+
+h1 {
+    padding: 1rem;
+    text-align: center;
+}
+
+.home-nav {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    a {
+        color: #fff;
+        font-weight: 700;
+        display: block;
+        padding: 0.5rem 1rem;
+        transition: all 0.3s ease-in-out;
+        &:hover {
+            font-size: 105%;
+            color: #f78401;
+            transform: translateX(1rem);
+        }
+    }
+}

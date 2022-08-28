@@ -1,0 +1,85 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-decoration: none;
+}
+
+::-webkit-input-placeholder {
+  color: #fff;
+  opacity: 1;
+}
+
+:-ms-input-placeholder {
+  color: #fff;
+  opacity: 1;
+}
+
+::-ms-input-placeholder {
+  color: #fff;
+  opacity: 1;
+}
+
+::placeholder {
+  color: #fff;
+  opacity: 1;
+}
+
+#posi {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+}
+
+#arrow-btn {
+  color: #2d6f67;
+  background-color: #fff;
+  display: inline-block;
+  padding: 0.35rem 0.4rem 0.35rem 2rem;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+}
+
+body {
+  font-size: 14px;
+  color: #fff;
+  font-family: "Arial", sans-serif;
+  font-weight: 500;
+  overflow-x: hidden;
+  background-color: #28726c;
+  width: 100%;
+  height: 100vh;
+  letter-spacing: 0.1em;
+  position: relative;
+  z-index: 1;
+}
+
+h1 {
+  padding: 1rem;
+  text-align: center;
+}
+
+.home-nav {
+  padding: 1rem 2rem;
+  font-size: 1rem;
+}
+
+.home-nav a {
+  color: #fff;
+  font-weight: 700;
+  display: block;
+  padding: 0.5rem 1rem;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.home-nav a:hover {
+  font-size: 105%;
+  color: #f78401;
+  -webkit-transform: translateX(1rem);
+          transform: translateX(1rem);
+}
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,141 @@
+$theme-clr: rgba(45, 111, 103, 1);
+$txt-clr: #fff;
+$font: "Arial",
+sans-serif;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+::placeholder {
+    color: $txt-clr;
+    opacity: 1;
+}
+
+@mixin flex($dir, $justify: space-around) {
+    display: flex;
+    justify-content: $justify;
+    flex-direction: $dir;
+    align-items: center;
+}
+
+#posi {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+}
+
+#arrow-btn {
+    color: $theme-clr;
+    background-color: #fff;
+    display: inline-block;
+    padding: 0.35rem 0.4rem 0.35rem 2rem;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+}
+
+body {
+    font-size: 14px;
+    color: $txt-clr;
+    font-family: $font;
+    font-weight: 500;
+    overflow-x: hidden;
+    background: url("/1-form-3d/assets/images/background.png") no-repeat center/cover;
+    width: 100%;
+    height: 100vh;
+    letter-spacing: 0.1em;
+    position: relative;
+    z-index: 1;
+    &::before {
+        content: "";
+        inset: 0;
+        position: absolute;
+        background-image: linear-gradient(rgba(31, 7, 7, 0.7), rgba(0, 0, 0, 0.7));
+        z-index: -1;
+    }
+}
+
+.form-container {
+    perspective: 80rem;
+    position: absolute;
+    top: 60%;
+    left: 55%;
+    .sign-form {
+        transform-style: preserve-3d;
+        position: absolute;
+        top: calc(50% - 17.5rem);
+        left: calc(50% - 25rem);
+        transform: rotateY(10deg);
+        transition: transform 0.5s, left 0.5s;
+        .sign-in-form {
+            background-color: rgba(40, 114, 108, 0.925);
+            padding: 2rem 1.5rem;
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            @include flex(column);
+            height: 25rem;
+            width: 41rem;
+            position: absolute;
+            .sign-btn {
+                @extend #arrow-btn;
+                @extend #posi;
+                border-radius: 100% 0.5rem 0.5rem 100%;
+            }
+            .sign-in-btn {
+                right: 2rem;
+                left: unset;
+                border-radius: 0.5rem 100% 100% 0.5rem;
+                padding: 0.35rem 2rem 0.35rem 0.35rem;
+            }
+            .form-title {
+                font-size: 1.5rem;
+            }
+            .form {
+                @include flex(column,
+                center);
+                input {
+                    width: 20rem;
+                    height: 2rem;
+                    background-color: transparent;
+                    outline: none;
+                    border: 1px solid #fff;
+                    margin: 0.35rem;
+                    padding: 0.45rem 1rem;
+                    letter-spacing: 0.1rem;
+                    border-radius: 10rem;
+                    color: $txt-clr;
+                }
+                .submit-btn {
+                    background-color: $txt-clr;
+                    color: $theme-clr;
+                    font-weight: 800;
+                    cursor: pointer;
+                    text-transform: uppercase;
+                }
+            }
+        }
+        .sign-up-form {
+            transform: rotateY(269deg) translateZ(20rem) translateX(-20rem);
+        }
+    }
+    .rotate {
+        transform: rotateY(70deg);
+        left: calc(50% + 15rem);
+    }
+}
+
+.nav-btn {
+    position: fixed;
+    bottom: 0.25rem;
+    padding: 1rem;
+    width: 100%;
+    a {
+        color: #fff;
+    }
+    .next-project {
+        float: right;
+    }
+}

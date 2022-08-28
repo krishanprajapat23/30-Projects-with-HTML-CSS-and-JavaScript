@@ -1,0 +1,189 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-decoration: none;
+}
+
+::-webkit-input-placeholder {
+  color: #fff;
+  opacity: 1;
+}
+
+:-ms-input-placeholder {
+  color: #fff;
+  opacity: 1;
+}
+
+::-ms-input-placeholder {
+  color: #fff;
+  opacity: 1;
+}
+
+::placeholder {
+  color: #fff;
+  opacity: 1;
+}
+
+#posi, .form-container .sign-form .sign-in-form .sign-btn {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+}
+
+#arrow-btn, .form-container .sign-form .sign-in-form .sign-btn {
+  color: #2d6f67;
+  background-color: #fff;
+  display: inline-block;
+  padding: 0.35rem 0.4rem 0.35rem 2rem;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+}
+
+body {
+  font-size: 14px;
+  color: #fff;
+  font-family: "Arial", sans-serif;
+  font-weight: 500;
+  overflow-x: hidden;
+  background: url("/1-form-3d/assets/images/background.png") no-repeat center/cover;
+  width: 100%;
+  height: 100vh;
+  letter-spacing: 0.1em;
+  position: relative;
+  z-index: 1;
+}
+
+body::before {
+  content: "";
+  inset: 0;
+  position: absolute;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(31, 7, 7, 0.7)), to(rgba(0, 0, 0, 0.7)));
+  background-image: linear-gradient(rgba(31, 7, 7, 0.7), rgba(0, 0, 0, 0.7));
+  z-index: -1;
+}
+
+.form-container {
+  -webkit-perspective: 80rem;
+          perspective: 80rem;
+  position: absolute;
+  top: 60%;
+  left: 55%;
+}
+
+.form-container .sign-form {
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  position: absolute;
+  top: calc(50% - 17.5rem);
+  left: calc(50% - 25rem);
+  -webkit-transform: rotateY(10deg);
+          transform: rotateY(10deg);
+  -webkit-transition: left 0.5s, -webkit-transform 0.5s;
+  transition: left 0.5s, -webkit-transform 0.5s;
+  transition: transform 0.5s, left 0.5s;
+  transition: transform 0.5s, left 0.5s, -webkit-transform 0.5s;
+}
+
+.form-container .sign-form .sign-in-form {
+  background-color: rgba(40, 114, 108, 0.925);
+  padding: 2rem 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 25rem;
+  width: 41rem;
+  position: absolute;
+}
+
+.form-container .sign-form .sign-in-form .sign-btn {
+  border-radius: 100% 0.5rem 0.5rem 100%;
+}
+
+.form-container .sign-form .sign-in-form .sign-in-btn {
+  right: 2rem;
+  left: unset;
+  border-radius: 0.5rem 100% 100% 0.5rem;
+  padding: 0.35rem 2rem 0.35rem 0.35rem;
+}
+
+.form-container .sign-form .sign-in-form .form-title {
+  font-size: 1.5rem;
+}
+
+.form-container .sign-form .sign-in-form .form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.form-container .sign-form .sign-in-form .form input {
+  width: 20rem;
+  height: 2rem;
+  background-color: transparent;
+  outline: none;
+  border: 1px solid #fff;
+  margin: 0.35rem;
+  padding: 0.45rem 1rem;
+  letter-spacing: 0.1rem;
+  border-radius: 10rem;
+  color: #fff;
+}
+
+.form-container .sign-form .sign-in-form .form .submit-btn {
+  background-color: #fff;
+  color: #2d6f67;
+  font-weight: 800;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.form-container .sign-form .sign-up-form {
+  -webkit-transform: rotateY(269deg) translateZ(20rem) translateX(-20rem);
+          transform: rotateY(269deg) translateZ(20rem) translateX(-20rem);
+}
+
+.form-container .rotate {
+  -webkit-transform: rotateY(70deg);
+          transform: rotateY(70deg);
+  left: calc(50% + 15rem);
+}
+
+.nav-btn {
+  position: fixed;
+  bottom: 0.25rem;
+  padding: 1rem;
+  width: 100%;
+}
+
+.nav-btn a {
+  color: #fff;
+}
+
+.nav-btn .next-project {
+  float: right;
+}
+/*# sourceMappingURL=main.css.map */
