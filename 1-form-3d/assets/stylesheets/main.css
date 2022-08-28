@@ -49,7 +49,7 @@ body {
   font-family: "Arial", sans-serif;
   font-weight: 500;
   overflow-x: hidden;
-  background: url("/1-form-3d/assets/images/background.png") no-repeat center/cover;
+  background: url("https://krishanprajapat23.github.io/30-Projects-with-HTML-CSS-and-JavaScript/1-form-3d/assets/images/background.png") no-repeat center/cover;
   width: 100%;
   height: 100vh;
   letter-spacing: 0.1em;
