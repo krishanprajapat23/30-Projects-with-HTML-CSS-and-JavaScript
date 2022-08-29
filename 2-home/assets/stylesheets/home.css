@@ -1,0 +1,293 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-decoration: none;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 14px;
+  color: #fff;
+  font-family: "Arial", sans-serif;
+  font-weight: 500;
+  overflow-x: hidden;
+  width: 100%;
+  height: 100vh;
+  letter-spacing: 0.1em;
+  background-color: #679667;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+.house {
+  width: 110rem;
+  height: 70rem;
+  background-color: #efefef;
+  position: relative;
+  -webkit-perspective: 100rem;
+          perspective: 100rem;
+}
+
+.house .main-roof {
+  width: 110%;
+  height: 30rem;
+  background-color: #084391;
+  position: absolute;
+  top: -10rem;
+  right: initial;
+  bottom: initial;
+  left: -5%;
+  -webkit-transform: rotateX(20deg);
+          transform: rotateX(20deg);
+  border-radius: 1rem 1rem 0.5rem 0.5rem;
+  -webkit-box-shadow: 0.5rem 1rem 2rem #333;
+          box-shadow: 0.5rem 1rem 2rem #333;
+}
+
+.house .window {
+  width: 11rem;
+  height: 14rem;
+  background: #aaa;
+  border: 0.4rem solid #333;
+  position: absolute;
+}
+
+.house .window::before {
+  content: "";
+  background-color: #333;
+  width: 100%;
+  height: 0.25rem;
+  position: absolute;
+  top: 38%;
+}
+
+.house .window::after {
+  content: "";
+  background-color: #333;
+  height: 100%;
+  width: 0.3rem;
+  position: absolute;
+  left: 50%;
+}
+
+.house .top-left-window {
+  top: 25rem;
+  left: 15rem;
+  border-radius: 50% 50% 0 0;
+}
+
+.house .top-right-window {
+  top: 25rem;
+  right: 15rem;
+  border-radius: 50% 50% 0 0;
+}
+
+.house .bottom-left-window {
+  top: 45rem;
+  left: 15rem;
+}
+
+.house .bottom-right-window {
+  top: 45rem;
+  right: 15rem;
+}
+
+.house .room {
+  width: 40rem;
+  height: 70%;
+  background-color: #fff;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  position: absolute;
+  top: initial;
+  right: initial;
+  bottom: 0;
+  left: 50%;
+  bottom: 0;
+  -webkit-perspective: 100rem;
+          perspective: 100rem;
+}
+
+.house .room .room-roof {
+  width: 110%;
+  height: 20rem;
+  background-color: #084391;
+  position: absolute;
+  top: -18rem;
+  right: initial;
+  bottom: initial;
+  left: -5%;
+  -webkit-transform: rotateX(30deg);
+          transform: rotateX(30deg);
+  -webkit-box-shadow: 0.2rem 0.5rem 1.5rem black;
+          box-shadow: 0.2rem 0.5rem 1.5rem black;
+  border-radius: 0.5rem 0.5rem 0.3rem 0.3rem;
+}
+
+.house .room .top-window {
+  width: 16rem;
+  height: 17rem;
+  background-color: #701616;
+  position: absolute;
+  top: 8rem;
+  right: initial;
+  bottom: initial;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  border-radius: 50% 50% 0 0;
+  border: 0.5rem solid #555;
+  -webkit-perspective: 150rem;
+          perspective: 150rem;
+}
+
+.house .room .top-window .top-left-wind {
+  width: 49.5%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.4);
+  position: absolute;
+  top: 0;
+  right: initial;
+  bottom: initial;
+  left: 0;
+  border-top-left-radius: 50rem;
+  border: 0.5rem solid #555;
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
+}
+
+.house .room .top-window .top-left-wind::before {
+  content: "";
+  width: 100%;
+  height: 0.5rem;
+  background-color: #555;
+  position: absolute;
+  top: 35%;
+  right: initial;
+  bottom: initial;
+  left: 0;
+}
+
+.house .room .top-window .top-right-wind {
+  width: 49.5%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.4);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: initial;
+  left: initial;
+  border-top-right-radius: 50rem;
+  border: 0.5rem solid #555;
+  -webkit-transform-origin: right;
+          transform-origin: right;
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
+}
+
+.house .room .top-window .top-right-wind::after {
+  content: "";
+  width: 100%;
+  height: 0.5rem;
+  background-color: #555;
+  position: absolute;
+  top: 35%;
+  right: 0;
+  bottom: initial;
+  left: initial;
+}
+
+.house .room .top-window:hover .top-left-wind {
+  -webkit-transform: rotateY(-50deg);
+          transform: rotateY(-50deg);
+}
+
+.house .room .top-window:hover .top-right-wind {
+  -webkit-transform: rotateY(50deg);
+          transform: rotateY(50deg);
+}
+
+.house .room .door-frame {
+  width: 14rem;
+  height: 18rem;
+  background-color: #444;
+  position: absolute;
+  top: initial;
+  right: initial;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  border: 0.6rem solid #333;
+  border-bottom: none;
+  -webkit-perspective: 100rem;
+          perspective: 100rem;
+}
+
+.house .room .door-frame .door {
+  width: 100%;
+  height: 100%;
+  background-color: #554418;
+  -webkit-transform-origin: right;
+          transform-origin: right;
+  -webkit-transition: -webkit-transform 1s 0.5s;
+  transition: -webkit-transform 1s 0.5s;
+  transition: transform 1s 0.5s;
+  transition: transform 1s 0.5s, -webkit-transform 1s 0.5s;
+}
+
+.house .room .door-frame .door .handle {
+  width: 3rem;
+  height: 0.7rem;
+  background-color: #999;
+  position: absolute;
+  top: 45%;
+  right: initial;
+  bottom: initial;
+  left: 1rem;
+  border-radius: 100% 0.5rem 0.5rem 100%;
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+}
+
+.house .room .door-frame .open {
+  -webkit-transform: rotateY(30deg);
+          transform: rotateY(30deg);
+}
+
+.house .room .door-frame .open .handle {
+  -webkit-transform: rotateZ(20deg);
+          transform: rotateZ(20deg);
+}
+
+.nav-btn {
+  position: fixed;
+  bottom: 0.25rem;
+  padding: 1rem;
+  width: 100%;
+}
+
+.nav-btn a {
+  color: #fff;
+}
+
+.nav-btn .next-project {
+  float: right;
+}
+/*# sourceMappingURL=home.css.map */

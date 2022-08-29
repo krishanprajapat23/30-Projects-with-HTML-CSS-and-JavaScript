@@ -1,0 +1,211 @@
+$theme-clr: rgb(8, 67, 145);
+$primary-clr: #efefef;
+$txt-clr: #fff;
+$black: #333;
+$font: "Arial",
+sans-serif;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+@mixin posi($top, $right, $bottom, $left) {
+    position: absolute;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+}
+
+body {
+    font-size: 14px;
+    color: $txt-clr;
+    font-family: $font;
+    font-weight: 500;
+    overflow-x: hidden;
+    width: 100%;
+    height: 100vh;
+    letter-spacing: 0.1em;
+    background-color: rgb(103, 150, 103);
+    display: grid;
+    place-items: center;
+}
+
+.house {
+    width: 110rem;
+    height: 70rem;
+    background-color: $primary-clr;
+    position: relative;
+    perspective: 100rem;
+    .main-roof {
+        width: 110%;
+        height: 30rem;
+        background-color: $theme-clr;
+        @include posi(-10rem, initial, initial, -5%);
+        transform: rotateX(20deg);
+        border-radius: 1rem 1rem 0.5rem 0.5rem;
+        box-shadow: 0.5rem 1rem 2rem $black;
+    }
+    .window {
+        width: 11rem;
+        height: 14rem;
+        background: #aaa;
+        border: 0.4rem solid #333;
+        position: absolute;
+        &::before {
+            content: "";
+            background-color: #333;
+            width: 100%;
+            height: 0.25rem;
+            position: absolute;
+            top: 38%;
+        }
+        &::after {
+            content: "";
+            background-color: #333;
+            height: 100%;
+            width: 0.3rem;
+            position: absolute;
+            left: 50%;
+        }
+    }
+    .top-left-window {
+        top: 25rem;
+        left: 15rem;
+        border-radius: 50% 50% 0 0;
+    }
+    .top-right-window {
+        top: 25rem;
+        right: 15rem;
+        border-radius: 50% 50% 0 0;
+    }
+    .bottom-left-window {
+        top: 45rem;
+        left: 15rem;
+    }
+    .bottom-right-window {
+        top: 45rem;
+        right: 15rem;
+    }
+    .room {
+        width: 40rem;
+        height: 70%;
+        background-color: #fff;
+        transform: translateX(-50%);
+        @include posi(initial, initial, 0, 50%);
+        bottom: 0;
+        perspective: 100rem;
+        .room-roof {
+            width: 110%;
+            height: 20rem;
+            background-color: $theme-clr;
+            @include posi(-18rem, initial, initial, -5%);
+            transform: rotateX(30deg);
+            box-shadow: 0.2rem 0.5rem 1.5rem black;
+            border-radius: 0.5rem 0.5rem 0.3rem 0.3rem;
+        }
+        .top-window {
+            width: 16rem;
+            height: 17rem;
+            background-color: rgb(112, 22, 22);
+            @include posi(8rem, initial, initial, 50%);
+            transform: translateX(-50%);
+            border-radius: 50% 50% 0 0;
+            border: 0.5rem solid #555;
+            perspective: 150rem;
+            .top-left-wind {
+                width: 49.5%;
+                height: 100%;
+                background-color: rgba(255, 255, 255, 0.4);
+                @include posi(0, initial, initial, 0);
+                border-top-left-radius: 50rem;
+                border: 0.5rem solid #555;
+                transform-origin: left;
+                transition: transform 1s;
+                &::before {
+                    content: "";
+                    width: 100%;
+                    height: 0.5rem;
+                    background-color: #555;
+                    @include posi(35%, initial, initial, 0);
+                }
+            }
+            .top-right-wind {
+                width: 49.5%;
+                height: 100%;
+                background-color: rgba(255, 255, 255, 0.4);
+                @include posi(0, 0, initial, initial);
+                border-top-right-radius: 50rem;
+                border: 0.5rem solid #555;
+                transform-origin: right;
+                transition: transform 1s;
+                &::after {
+                    content: "";
+                    width: 100%;
+                    height: 0.5rem;
+                    background-color: #555;
+                    @include posi(35%, 0, initial, initial);
+                }
+            }
+            &:hover {
+                .top-left-wind {
+                    transform: rotateY(-50deg);
+                }
+                .top-right-wind {
+                    transform: rotateY(50deg);
+                }
+            }
+        }
+        .door-frame {
+            width: 14rem;
+            height: 18rem;
+            background-color: #444;
+            @include posi(initial, initial, 0, 50%);
+            transform: translateX(-50%);
+            border: 0.6rem solid $black;
+            border-bottom: none;
+            perspective: 100rem;
+            .door {
+                width: 100%;
+                height: 100%;
+                background-color: rgb(85, 68, 24);
+                transform-origin: right;
+                transition: transform 1s 0.5s;
+                .handle {
+                    width: 3rem;
+                    height: 0.7rem;
+                    background-color: #999;
+                    @include posi(45%, initial, initial, 1rem);
+                    border-radius: 100% 0.5rem 0.5rem 100%;
+                    transform-origin: left;
+                    transition: transform 0.5s;
+                }
+            }
+            .open {
+                transform: rotateY(30deg);
+                .handle {
+                    transform: rotateZ(20deg);
+                }
+            }
+        }
+    }
+}
+
+.nav-btn {
+    position: fixed;
+    bottom: 0.25rem;
+    padding: 1rem;
+    width: 100%;
+    a {
+        color: #fff;
+    }
+    .next-project {
+        float: right;
+    }
+}
