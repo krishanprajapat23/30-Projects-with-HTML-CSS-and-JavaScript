@@ -1,0 +1,122 @@
+$theme-clr: rgba(255, 69, 69, 0.5);
+$primary-clr: #999;
+$txt-clr: #555;
+$black: #333;
+$font: "Arial",
+sans-serif;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+@mixin posi($top, $right, $bottom, $left) {
+    position: absolute;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+}
+
+body {
+    font-size: 14px;
+    color: $txt-clr;
+    font-family: $font;
+    width: 100%;
+    height: 100vh;
+    letter-spacing: 0.1em;
+    background-color: rgb(240, 210, 144);
+}
+
+.wrapper {
+    width: 100%;
+    height: 4.5rem;
+    background-color: $theme-clr;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s;
+    .search-input {
+        width: 30rem;
+        display: flex;
+        align-items: center;
+        input {
+            width: 27rem;
+            background-color: transparent;
+            border: none;
+            border-bottom: 1px solid $primary-clr;
+            font-size: 1rem;
+            letter-spacing: 0.15rem;
+            outline: none;
+            color: $txt-clr;
+            margin-right: 1rem;
+            &::-webkit-search-cancel-button {
+                display: none;
+            }
+        }
+        i {
+            font-size: 1rem;
+            color: $primary-clr;
+            cursor: pointer;
+        }
+    }
+}
+
+.search-icon {
+    font-size: 1rem;
+    @include posi(1.7rem, 3rem, initial, initial);
+    animation: searchAnim2 0.5s forwards;
+    i {
+        color: $primary-clr;
+        cursor: pointer;
+    }
+}
+
+.change {
+    animation: searchAnim1 1s forwards;
+}
+
+.op {
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.5s 1s;
+}
+
+@keyframes searchAnim1 {
+    0% {
+        top: 1.7rem;
+    }
+    40% {
+        top: 40%;
+        font-size: 25rem;
+    }
+    100% {
+        top: 1.7rem;
+        right: calc(50% + 16rem);
+    }
+}
+
+@keyframes searchAnim2 {
+    0% {
+        right: calc(50% + 16rem);
+    }
+    100% {
+        right: 3rem;
+    }
+}
+
+.nav-btn {
+    position: fixed;
+    bottom: 0.25rem;
+    padding: 1rem;
+    width: 100%;
+    a {
+        color: rgb(29, 29, 29);
+    }
+    .next-project {
+        float: right;
+    }
+}
