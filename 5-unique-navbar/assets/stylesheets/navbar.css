@@ -1,0 +1,159 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-decoration: none;
+}
+
+body {
+  font-size: 14px;
+  color: #ff9500;
+  font-family: "Arial", sans-serif;
+  width: 100%;
+  height: 100vh;
+  letter-spacing: 0.1em;
+  background-color: #333;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+.page-title {
+  font-size: clamp(1rem, 2.5vw, 2rem);
+}
+
+.navbar {
+  width: 100%;
+  max-width: 60rem;
+  height: 7rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 0.5rem;
+  -webkit-box-shadow: 0.3rem 0.3rem 0.3rem #333;
+          box-shadow: 0.3rem 0.3rem 0.3rem #333;
+}
+
+.navbar .navbar-link {
+  width: 10rem;
+  height: 100%;
+  background-color: #ff9500;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-bottom: 1rem;
+  position: relative;
+  overflow: hidden;
+  -webkit-transition: border-radius 0.2s;
+  transition: border-radius 0.2s;
+}
+
+.navbar .navbar-link:first-child {
+  pointer-events: none;
+  border-radius: 0.5rem 0 0 0.5rem;
+}
+
+.navbar .navbar-link:last-child {
+  pointer-events: none;
+  border-radius: 0 0.5rem 0.5rem 0;
+}
+
+.navbar .navbar-link::before {
+  content: "";
+  width: 7.5rem;
+  height: 6rem;
+  background-color: #333;
+  position: absolute;
+  top: -100%;
+  left: -0.5rem;
+  border-radius: 0 0 5rem 5rem;
+  -webkit-transition: top 0.4s, background-color 0.4s 0.4s;
+  transition: top 0.4s, background-color 0.4s 0.4s;
+}
+
+.navbar .navbar-link i {
+  -webkit-transition: color 0.4s, font-size 0.4s;
+  transition: color 0.4s, font-size 0.4s;
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+.navbar .navbar-link span {
+  position: absolute;
+  color: #fff;
+  top: 15%;
+  font-size: 0.75rem;
+  font-weight: 600;
+  opacity: 0;
+  -webkit-transition: all 0.45s Ease-in-out;
+  transition: all 0.45s Ease-in-out;
+}
+
+.navbar .navbar-link:hover span {
+  opacity: 1;
+  top: 25%;
+}
+
+.navbar .prevElementChange {
+  border-top-right-radius: 1.3rem !important;
+  -webkit-transition: border-radius 0.45s;
+  transition: border-radius 0.45s;
+}
+
+.navbar .change {
+  background-color: #c47404;
+}
+
+.navbar .change::before {
+  top: -35%;
+  -webkit-transition: top 0.2s;
+  transition: top 0.2s;
+}
+
+.navbar .change i {
+  color: #333;
+  font-size: 2rem;
+}
+
+.navbar .change span {
+  opacity: 1;
+}
+
+.navbar .change:hover > span {
+  top: 15%;
+}
+
+.navbar .nextElementChange {
+  border-top-left-radius: 1.3rem !important;
+  -webkit-transition: border-radius 0.45s;
+  transition: border-radius 0.45s;
+}
+
+.nav-btn {
+  position: fixed;
+  bottom: 0.25rem;
+  padding: 1rem;
+  width: 100%;
+}
+
+.nav-btn a {
+  color: #fff;
+}
+
+.nav-btn .next-project {
+  float: right;
+}
+/*# sourceMappingURL=navbar.css.map */
