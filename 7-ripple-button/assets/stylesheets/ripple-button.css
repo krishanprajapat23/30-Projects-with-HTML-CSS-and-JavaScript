@@ -1,0 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-decoration: none;
+}
+
+body {
+  font-size: 14px;
+  color: #ff9500;
+  font-family: "Courier New", monospace;
+  letter-spacing: 0.1em;
+  background-color: #333;
+  width: 100%;
+}
+
+.page-title {
+  font-size: clamp(1rem, 2.5vw, 2rem);
+  text-align: center;
+  margin: 1rem auto;
+}
+
+.ripple-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+}
+
+.ripple-btn .btn {
+  color: #fff;
+  height: 11rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  aspect-ratio: 1/1;
+  background-color: #ff9500;
+  border: 0.125rem dotted #fff;
+  border-radius: 50%;
+  overflow: hidden;
+  position: absolute;
+}
+
+.ripple-btn .btn span {
+  position: relative;
+  color: #fff;
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: 0.2rem;
+}
+
+.ripple-btn .bt {
+  top: 1rem;
+}
+
+.ripple {
+  position: absolute;
+  width: 0;
+  height: 0;
+  background-color: #9b0e0e;
+  border-radius: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-animation: rippleAnim 0.5s forwards;
+          animation: rippleAnim 0.5s forwards;
+}
+
+@-webkit-keyframes rippleAnim {
+  0% {
+    width: 0;
+    height: 0;
+  }
+  100% {
+    width: 210%;
+    height: 210%;
+  }
+}
+
+@keyframes rippleAnim {
+  0% {
+    width: 0;
+    height: 0;
+  }
+  100% {
+    width: 210%;
+    height: 210%;
+  }
+}
+
+.nav-btn {
+  position: fixed;
+  bottom: 0.25rem;
+  padding: 1rem;
+  width: 100%;
+}
+
+.nav-btn a {
+  color: #fff;
+  font-weight: 500;
+}
+
+.nav-btn .next-project {
+  float: right;
+}
+/*# sourceMappingURL=ripple-button.css.map */
