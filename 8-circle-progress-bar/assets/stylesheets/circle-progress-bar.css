@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-decoration: none;
+}
+
+.center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body {
+  font-size: 14px;
+  color: #ff9500;
+  font-family: "Courier New", monospace;
+  letter-spacing: 0.1em;
+}
+
+.page-title {
+  font-size: clamp(1rem, 2.5vw, 2rem);
+  text-align: center;
+  margin: 1rem auto;
+}
+
+.progress {
+  width: 100%;
+  height: 200vh;
+  background-color: #333;
+}
+
+.progress .progress-bar {
+  width: 26rem;
+  aspect-ratio: 1/1;
+  background-color: #fff;
+  border-radius: 50%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  overflow: hidden;
+}
+
+.progress .half-circle, .progress .half-circle-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  -webkit-transform-origin: right center;
+          transform-origin: right center;
+}
+
+.progress .half-circle:nth-child(1), .progress .half-circle-top:nth-child(1) {
+  background-color: #ff9500;
+}
+
+.progress .half-circle:nth-child(2), .progress .half-circle-top:nth-child(2) {
+  background-color: #ff9500;
+}
+
+.progress .half-circle-top {
+  background-color: #fff;
+}
+
+.progress .progress-bar:hover .half-circle:nth-child(1), .progress .progress-bar:hover .half-circle-top:nth-child(1) {
+  /* transform: rotate(180deg); */
+  /* transition: transform 1s linear; */
+}
+
+.progress .progress-bar:hover .half-circle:nth-child(2), .progress .progress-bar:hover .half-circle-top:nth-child(2) {
+  /* transform: rotate(360deg); */
+  /* transition: transform 2s linear; */
+}
+
+.progress .progress-bar:hover .half-circle-top {
+  /* opacity: 0; */
+  /* transition: opacity 0s 1s; */
+}
+
+.progress .progressbar-circle {
+  width: 25.4rem;
+  aspect-ratio: 1/1;
+  background-color: #000;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 2rem;
+  z-index: 10;
+  -webkit-transition: all 0.45s ease-in-out;
+  transition: all 0.45s ease-in-out;
+}
+
+.progress .progressbar-circle:hover {
+  background-color: #201919;
+  font-size: 3.4rem;
+  color: #ff9500;
+}
+
+@media screen and (max-width: 991px) {
+  .progress .progress-bar {
+    width: 14rem;
+  }
+  .progress .progressbar-circle {
+    width: 13rem;
+  }
+}
+
+.nav-btn {
+  position: fixed;
+  bottom: 0.25rem;
+  padding: 1rem;
+  width: 100%;
+}
+
+.nav-btn a {
+  color: #fff;
+  font-weight: 500;
+}
+
+.nav-btn .next-project {
+  float: right;
+}
+/*# sourceMappingURL=circle-progress-bar.css.map */
