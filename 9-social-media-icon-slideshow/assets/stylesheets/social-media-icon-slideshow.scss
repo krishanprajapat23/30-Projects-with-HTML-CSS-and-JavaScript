@@ -1,0 +1,84 @@
+$theme-clr: #ff9500;
+$blackish-clr: #333;
+$font: "Courier New",
+monospace;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+#center {
+    display: flex;
+    align-items: center;
+}
+
+body {
+    font-size: 14px;
+    color: $theme-clr;
+    font-family: $font;
+    letter-spacing: 0.1em;
+    background: radial-gradient(rgba(48, 48, 48, 0.95), rgba(0, 0, 0, 0.95)), url("../images/bg.jpg") no-repeat center/cover;
+}
+
+.page-title {
+    font-size: clamp(1rem, 2.5vw, 2rem);
+    text-align: center;
+    margin: 1rem auto;
+}
+
+.slideshow {
+    width: 100%;
+    height: 80vh;
+    @extend #center;
+    padding: 0 2rem;
+    .link {
+        width: 20%;
+        filter: brightness(0.1);
+        &:nth-child(1),
+        &:nth-child(5) {
+            transition: width 0.5s, opacity 0.5s;
+        }
+        &:nth-child(3) {
+            transition: filter 0.5s;
+        }
+        img {
+            width: 100%;
+        }
+    }
+    .faded-out {
+        opacity: 0;
+        width: 0;
+    }
+    .main-link {
+        filter: brightness(1.5);
+        transition: filter 1.5s;
+    }
+}
+
+// ================media query ==========
+@media screen and (max-width: 991px) {
+    .progress {
+        .progress-bar {
+            width: 14rem;
+        }
+        .progressbar-circle {
+            width: 13rem;
+        }
+    }
+}
+
+.nav-btn {
+    position: fixed;
+    bottom: 0.25rem;
+    padding: 1rem;
+    width: 100%;
+    a {
+        color: #fff;
+        font-weight: 500;
+    }
+    .next-project {
+        float: right;
+    }
+}
