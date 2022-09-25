@@ -1,0 +1,91 @@
+$theme-clr: #ff9500;
+$blackish-clr: #333;
+$box-dark: #ddd;
+$box-lite: #eee;
+$white: #fff;
+$font: "Courier New",
+monospace;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+#center {
+    display: flex;
+    align-items: center;
+}
+
+#button {
+    width: 6rem;
+    height: 2rem;
+    font-size: 1rem;
+    color: $theme-clr;
+    border: none;
+    border-radius: 5rem;
+    letter-spacing: 0.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0.3rem 0.3rem 0.8rem $box-lite;
+}
+
+body {
+    font-size: 1rem;
+    color: $white;
+    background-color: $theme-clr;
+    font-family: $font;
+    letter-spacing: 0.1em;
+    min-height: 100vh;
+}
+
+.page-title {
+    font-size: clamp(1rem, 2.5vw, 2rem);
+    text-align: center;
+    margin: 1rem auto;
+}
+
+section {
+    margin-top: 5rem;
+    .wrapper-watch {
+        max-width: 800px;
+        margin: 2rem auto;
+        text-align: center;
+        border: 1px solid $blackish-clr;
+        padding: 1.5rem;
+        border-radius: 0.75rem;
+        p {
+            font-size: 2rem;
+            font-weight: 600;
+        }
+        button {
+            background-color: $blackish-clr;
+            padding: 0.5rem 1.5rem;
+            color: #fff;
+            margin: 1rem 0.5rem 0.25rem;
+            font-size: 1rem;
+            border-radius: 0.5rem;
+            border: 1px solid $blackish-clr;
+            transition: all 0.45s ease-in;
+            &:hover {
+                background-color: $theme-clr;
+                color: $blackish-clr;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.nav-btn {
+    position: fixed;
+    bottom: 0.25rem;
+    padding: 1rem;
+    width: 100%;
+    a {
+        color: $blackish-clr;
+        font-weight: 500;
+    }
+    .next-project {
+        float: right;
+    }
+}
