@@ -1,0 +1,111 @@
+:root {
+  --bg: #193549;
+  --base: #ffc600;
+  --spacing: 10px;
+  --blur: 10px;
+  --blackish-clr: #333;
+  --width: 70%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+#center {
+  display: flex;
+  align-items: center;
+}
+
+#button {
+  width: 6rem;
+  height: 2rem;
+  font-size: 1rem;
+  color: --theme-clr;
+  border: none;
+  border-radius: 5rem;
+  letter-spacing: 0.1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+body {
+  font-size: 1rem;
+  color: white;
+  background: var(--bg);
+  letter-spacing: 0.1em;
+  min-height: 100vh;
+}
+
+.page-title {
+  font-size: clamp(1rem, 2.5vw, 2rem);
+  text-align: center;
+  margin: 1rem auto;
+}
+
+.controls {
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.range {
+  width: 10rem;
+  height: 5px;
+  -webkit-appearance: none;
+  background: #0a85ff;
+  outline: none;
+}
+
+.range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  background: var(--base);
+  width: 22px;
+  height: 22px;
+
+  border-radius: 50%;
+
+  cursor: pointer;
+}
+
+.random-img {
+  padding: var(--spacing);
+  background: var(--base);
+  width: var(--width);
+  filter: blur(var(--blur));
+  margin: 2rem auto;
+  display: flex;
+  justify-content: center;
+}
+
+.h1 {
+  color: var(--base);
+}
+
+#myParagraph {
+  padding: 1rem;
+  background: #fff;
+  color: #193549;
+  margin: 1rem auto;
+  max-width: 170px;
+}
+
+.nav-btn {
+  position: fixed;
+  bottom: 0.25rem;
+  padding: 1rem;
+  width: 100%;
+}
+.nav-btn a {
+  color: #fff;
+  font-weight: 500;
+}
+.nav-btn .next-project {
+  float: right;
+}                                                                                                                           

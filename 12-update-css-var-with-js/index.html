@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project 12 - Update CSS Variable with JS</title>
+    <link rel="stylesheet" href="../assets/stylesheets/all.css" />
+    <!-- <link rel="stylesheet" href="./assets/stylesheets/update-css-var-with-js.css" /> -->
+    <link rel="stylesheet" href="./assets/stylesheets/update-css-var-with-js.css" />
+</head>
+
+<body>
+    <h1 class="page-title">Update CSS Variable with <span class="h1">JS</span></h1>
+    <section class="controls">
+        <div class="control">
+            <label for="spacing">Spacing:</label>
+            <input class="range" type="range" id="spacing" name="spacing" min="10" max="200" value="10"
+                data-sizing="px">
+        </div>
+        <div class="control">
+            <label for="width">width:</label>
+            <input class="range" type="range" id="width" name="width" min="30" max="100" value="50" data-sizing="%">
+        </div>
+        <div class="control">
+            <label for="blur">Blur:</label>
+            <input class="range" type="range" id="blur" name="blur" min="0" max="25" value="5" data-sizing="px">
+        </div>
+        <div class="control">
+            <label for="base">Base-Color:</label>
+            <input type="color" name="base" value="#ffc600" id="base">
+        </div>
+        <div class="control">
+
+            <label for="bg">bg-Color:</label>
+            <input class="change-bg" type="color" name="bg" value="#193549" id="bg">
+        </div>
+        <p id="myParagraph"></p>
+    </section>
+
+
+    <img class="random-img" src="https://picsum.photos/800/500" alt="">
+
+    <div class="nav-btn">
+        <a href="../index.html"><i class="fas fa-house"></i>Home</a>
+        <a href="../index.html" class="next-project">Project-13 : </a>
+    </div>
+
+    <script src="./assets/scripts/update-css-var-with-js.js"></script>
+</body>
+
+</html>
