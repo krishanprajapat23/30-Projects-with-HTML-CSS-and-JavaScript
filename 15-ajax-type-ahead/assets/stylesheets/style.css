@@ -1,0 +1,102 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+#center {
+  display: flex;
+  align-items: center;
+}
+
+#button, .show-data .search-form .search-btn {
+  width: 6rem;
+  font-size: 1rem;
+  color: #333;
+  border: none;
+  letter-spacing: 0.1rem;
+  font-weight: 600;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0.3rem 0.3rem 0.8rem #eee;
+}
+
+body {
+  font-size: 1rem;
+  color: #fff;
+  background-color: #ff9500;
+  font-family: "Courier New", monospace;
+  letter-spacing: 0.1em;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.page-title {
+  font-size: clamp(1rem, 2.5vw, 2rem);
+  text-align: center;
+  margin: 1rem auto;
+}
+
+.show-data .search-form {
+  max-width: 40rem;
+  margin: 2rem auto;
+  display: flex;
+}
+.show-data .search-form .search {
+  border: none;
+  box-shadow: 0.3rem 0.3rem 0.8rem #eee;
+  width: 100%;
+  padding: 20px;
+  margin: 0;
+  outline: 0;
+  border-radius: 5px 0 0 5px;
+}
+.show-data .search-form .search-btn {
+  border-radius: 0 5px 5px 0;
+}
+.show-data .suggestion {
+  max-width: 40rem;
+  margin: 2rem auto;
+}
+.show-data .suggestion li {
+  background: white;
+  list-style: none;
+  border-bottom: 1px solid #d8d8d8;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.14);
+  margin: 0;
+  color: #333;
+  padding: 20px;
+  transition: background 0.2s;
+  display: flex;
+  justify-content: space-between;
+  text-transform: capitalize;
+}
+.show-data .suggestion li:nth-child(even) {
+  transform: perspective(100px) rotateX(3deg) translateY(2px) scale(1.001);
+  background: linear-gradient(to bottom, #ffffff 0%, #EFEFEF 100%);
+}
+.show-data .suggestion li:nth-child(odd) {
+  transform: perspective(100px) rotateX(-3deg) translateY(3px);
+  background: linear-gradient(to top, #ffffff 0%, #EFEFEF 100%);
+}
+.show-data .suggestion li span.population {
+  font-size: 15px;
+}
+.show-data .suggestion li .hl {
+  background: #ffc600;
+}
+
+.nav-btn {
+  position: fixed;
+  bottom: 0.25rem;
+  padding: 1rem;
+  width: 100%;
+}
+.nav-btn a {
+  color: #333;
+  font-weight: 500;
+}
+.nav-btn .next-project {
+  float: right;
+}/*# sourceMappingURL=style.css.map */
