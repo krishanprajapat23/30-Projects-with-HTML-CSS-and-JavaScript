@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project 20 - CSS Text Shadow Mouse Move Effect</title>
+    <link rel="stylesheet" href="../assets/stylesheets/all.css" />
+
+    <style>
+        body {
+    margin: 0;
+    background: #ff9500;
+    font-family: "helvetica neue";
+    font-size: 20px;
+    font-weight: 200;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+.hero h1 {
+    font-size: 100px;	text-shadow: 10px 10px 0 rgba(25, 25, 112, 0.4);
+
+}
+.nav-btn {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.nav-btn a {
+  text-decoration: none;
+  color: #333;
+  padding: 1rem;
+  transition: all 0.3s ease-in;
+}
+.nav-btn a:hover {
+  color: rgb(13, 146, 106);
+  font-weight: 500;
+}
+    </style>
+</head>
+
+<body>
+ <section class="hero">
+    <h1>Welcome</h1>
+ </section>
+    <div class="nav-btn">
+        <a href="../index.html"><i class="fas fa-house"></i>Home</a>
+        <a href="../21/index.html">Project 21 : </a>
+    </div>
+
+    <script src="./assets/scripts/custom.js"></script>
+</body>
+
+</html>
