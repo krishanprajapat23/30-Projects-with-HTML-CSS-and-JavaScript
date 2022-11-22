@@ -1,0 +1,80 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+$theme-clr: #ff9500;
+
+a {
+  color: $theme-clr;
+  z-index: 11;
+  position: relative;
+}
+
+body {
+  margin: 0;
+  background: $theme-clr;
+  font-family: "helvetica neue", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.voiceinator {
+  background: #fff;
+  max-width: 500px;
+  margin: 1rem auto;
+  padding: 1rem 1.5rem;
+  .controls {
+    .select {
+      position: relative;
+      display: flex;
+      width: 100%;
+      border-radius: 0.25em;
+      overflow: hidden;
+      box-shadow: 0 5px 4px rgb(0 0 0 / 20%);
+      &:before {
+        content: "\25BC";
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 0.75rem;
+        background-color: #333;
+        color: #fff;
+        transition: 0.25s all ease;
+        pointer-events: none;
+      }
+      select {
+        background-color: #333;
+        color: white;
+        padding: 0.75rem;
+        width: 100%;
+        border: none;
+        font-size: 1rem;
+        appearance: button;
+        outline: none;
+        margin-bottom: 0.5rem;
+        flex: 1;
+      }
+    }
+  }
+}
+
+.nav-btn {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  a {
+    text-decoration: none;
+    color: #fff;
+    z-index: 1;
+    transition: all 0.3s ease-in;
+    &:hover {
+      color: rgb(13, 146, 106);
+      font-weight: 500;
+    }
+  }
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project 23 - Speech Synthesis</title>
+    <link rel="stylesheet" href="../assets/stylesheets/all.css" />
+    <link rel="stylesheet" href="./assets/stylesheets/style.css" />
+</head>
+
+<body>
+
+    <section class="voiceinator">
+        <h1>Text to Voice Converter</h1>
+        <div class="controls">
+            <div class="select">
+                <select name="voice" id="voice">
+                    <option value="">Select a voice</option>
+                </select>
+            </div>
+            <div class="rate-range">
+                <label for="rate">Rate:</label>
+                <input type="range" name="rate" id="rate" min="0" max="3" value="1" step=".2">
+            </div>
+
+            <div class="pitch">
+                <label for="pitch">Pitch:</label>
+                <input type="range" name="pitch" id="pitch" min="0" max="2" step=".2">
+            </div>
+
+            <div class="text-content">
+                <textarea name="text" id="text">Hello there !</textarea>
+            </div>
+            <button id="stop">Stop</button>
+            <button id="speak">Speak</button>
+
+        </div>
+    </section>
+   
+   
+
+    <div class="nav-btn">
+        <a href="../index.html"><i class="fas fa-house"></i>Home</a>
+        <a href="../24-/index.html">Project 24 : </a>
+    </div>
+
+    <script src="./assets/scripts/custom.js"></script>
+</body>
+
+</html>
