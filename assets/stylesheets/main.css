@@ -1,22 +1,19 @@
 * {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+a {
   text-decoration: none;
 }
 
-::-webkit-input-placeholder {
+::-moz-placeholder {
   color: #fff;
   opacity: 1;
 }
 
 :-ms-input-placeholder {
-  color: #fff;
-  opacity: 1;
-}
-
-::-ms-input-placeholder {
   color: #fff;
   opacity: 1;
 }
@@ -33,7 +30,7 @@
 }
 
 #arrow-btn {
-  color: #2d6f67;
+  color: rgb(45, 111, 103);
   background-color: #fff;
   display: inline-block;
   padding: 0.35rem 0.4rem 0.35rem 2rem;
@@ -46,15 +43,26 @@
 body {
   font-size: 14px;
   color: #fff;
-  font-family: "Arial", sans-serif;
+  font-family: "roboto", sans-serif;
   font-weight: 500;
   overflow-x: hidden;
-  background-color: #28726c;
+  background: url(../code.webp) 100% 100% no-repeat fixed;
+  background-size: cover;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   letter-spacing: 0.1em;
   position: relative;
   z-index: 1;
+}
+body::before {
+  content: "";
+  background-color: #333;
+  opacity: 0.5;
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
 }
 
 h1 {
@@ -66,20 +74,19 @@ h1 {
   padding: 1rem 2rem;
   font-size: 1rem;
 }
-
-.home-nav a {
+.home-nav .nav-card {
+  background-image: linear-gradient(to right, rgb(242, 112, 156), rgb(255, 148, 114));
+}
+.home-nav .nav-card .card-block {
+  padding: 1rem;
+}
+.home-nav .nav-card .card-block a {
   color: #fff;
   font-weight: 700;
   display: block;
   padding: 0.5rem 1rem;
-  -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
-
-.home-nav a:hover {
-  font-size: 105%;
-  color: #f78401;
-  -webkit-transform: translateX(1rem);
-          transform: translateX(1rem);
-}
-/*# sourceMappingURL=main.css.map */
+.home-nav .nav-card .card-block a:hover {
+  transform: translateX(1rem);
+}/*# sourceMappingURL=main.css.map */
