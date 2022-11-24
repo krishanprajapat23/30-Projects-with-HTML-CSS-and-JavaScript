@@ -1,0 +1,140 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+a {
+  color: #ff9500;
+  z-index: 11;
+  position: relative;
+}
+
+body {
+  margin: 0;
+  background: hsl(333deg, 100%, 53%);
+  background: linear-gradient(90deg, hsl(333deg, 100%, 53%) 0%, hsl(33deg, 94%, 57%) 100%);
+  font-family: "helvetica neue", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #fff;
+  min-height: 100vh;
+}
+
+nav {
+  position: relative;
+  perspective: 600px;
+}
+nav .dropdown-bg {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: 0 50px 100px rgba(50, 50, 93, 0.1), 0 15px 35px rgba(50, 50, 93, 0.15), 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s, opacity 0.1s, transform 0.2s;
+  transform-origin: 50% 0;
+  display: flex;
+  justify-content: center;
+  opacity: 0;
+}
+nav .dropdown-bg.open {
+  opacity: 1;
+}
+nav .dropdown-bg .arrow {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  display: block;
+  background: white;
+  transform: translateY(-50%) rotate(45deg);
+}
+nav .list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+nav .list li {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+nav .list li .dropdown {
+  position: absolute;
+  overflow: hidden;
+  padding: 20px;
+  top: -20px;
+  border-radius: 2px;
+  transition: all 0.5s;
+  transform: translateY(100px);
+  will-change: opacity;
+  display: none;
+}
+nav .list li .dropdown .bio {
+  min-width: 500px;
+  line-height: 1.7;
+  color: #333;
+}
+nav .list li .dropdown .bio img {
+  float: left;
+  margin-right: 20px;
+}
+nav .list li > a {
+  color: #fff;
+  font-size: 20px;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 0.875rem 1rem;
+  display: inline-block;
+  margin: 1rem;
+  border-radius: 5px;
+}
+nav .list li .courses {
+  min-width: 300px;
+}
+nav .list li .courses li {
+  padding: 10px 0;
+  display: block;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  color: #333;
+}
+nav .list li .courses li a {
+  color: #ffc600;
+  font-size: 1rem;
+  padding: 0;
+  background: transparent;
+  display: inline-block;
+}
+nav .list li .courses li a.button {
+  background: black;
+  display: block;
+  padding: 10px;
+  color: white;
+  margin-bottom: 10px;
+}
+nav .list li.trigger-enter .dropdown {
+  display: block;
+}
+nav .list li.trigger-enter-active .dropdown {
+  opacity: 1;
+}
+
+.nav-btn {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.nav-btn a {
+  text-decoration: none;
+  color: #fff;
+  z-index: 1;
+  transition: all 0.3s ease-in;
+}
+.nav-btn a:hover {
+  color: rgb(13, 146, 106);
+  font-weight: 500;
+}/*# sourceMappingURL=style.css.map */

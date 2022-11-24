@@ -76,6 +76,10 @@ h1 {
 }
 .home-nav .nav-card {
   background-image: linear-gradient(to right, rgb(242, 112, 156), rgb(255, 148, 114));
+  transition: all 0.15s ease-in;
+}
+.home-nav .nav-card:hover {
+  border-left: 5px solid #fdfbfb;
 }
 .home-nav .nav-card .card-block {
   padding: 1rem;
@@ -86,7 +90,4 @@ h1 {
   display: block;
   padding: 0.5rem 1rem;
   transition: all 0.3s ease-in-out;
-}
-.home-nav .nav-card .card-block a:hover {
-  transform: translateX(1rem);
 }/*# sourceMappingURL=main.css.map */
